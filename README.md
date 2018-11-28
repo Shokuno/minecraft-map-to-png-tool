@@ -4,7 +4,7 @@ This is a tool that can read the binary data of Minecraft maps and export it to 
 
 REQUIREMENTS:
 - Minecraft
-- Java (if you have Minecraft Java edition you're good)
+- Java
 - NBTExplorer (this is a tool to edit world data for minecraft worlds)
 
 How to use it:
