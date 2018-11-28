@@ -1,7 +1,5 @@
-
-nbproject/project.xml
-nbproject/project.properties
-nbproject/private/private.xml
-nbproject/private/private.properties
-nbproject/genfiles.properties
-nbproject/build-impl.xml
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
