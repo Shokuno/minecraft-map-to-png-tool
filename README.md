@@ -1,6 +1,6 @@
 # minecraft-map-to-png-tool
 Welcome!
-This is tool that can read the binary data of Minecraft maps and export it to a .png file!
+This is a tool that can read the binary data of Minecraft maps and export it to a .png file!
 
 REQUIREMENTS:
 - Minecraft
