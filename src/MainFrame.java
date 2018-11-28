@@ -46,10 +46,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         colorList.setListData(new String[0]);
         
-        drawPanel.setVisible(false);
-        colorPanel.setVisible(true);
-        loadMapButton.setEnabled(false);
-        exportPngButton.setEnabled(false);
+        updateView();
     }
     
     private void updateView() {
