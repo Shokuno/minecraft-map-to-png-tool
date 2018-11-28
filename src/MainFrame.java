@@ -64,7 +64,7 @@ public class MainFrame extends javax.swing.JFrame {
         loadMapButton.setEnabled(versionSelected);
         
         colorPanel.setVisible(colorMenuOpen);
-        
+        colorPanelButton.setEnabled(!colorMenuOpen);
     }
     
     private void doAdd() throws IOException, IllegalArgumentException {
