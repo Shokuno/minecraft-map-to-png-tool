@@ -4,14 +4,9 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.imageio.ImageIO;
-import javax.swing.DefaultListModel;
-import javax.swing.JColorChooser;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
-import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -45,6 +40,8 @@ public class MainFrame extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         
         colorList.setListData(new String[0]);
+        
+        colorMenuOpen = true;
         
         updateView();
     }
@@ -116,7 +113,6 @@ public class MainFrame extends javax.swing.JFrame {
         exportPngButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(900, 600));
 
         drawPanel.setMinimumSize(new java.awt.Dimension(256, 256));
         drawPanel.setPreferredSize(new java.awt.Dimension(512, 512));
@@ -349,7 +345,7 @@ public class MainFrame extends javax.swing.JFrame {
                 
                 colorList.setListData(colors.colorsToString());
                 
-                mapLoaded = true;
+                versionSelected = true;
                 
             }
         } catch (IllegalArgumentException e) {
@@ -395,6 +391,8 @@ public class MainFrame extends javax.swing.JFrame {
                                 + "The file is located in the same directory as the tool and every\n"
                                 + "dot is replaced by two minus signs. It's a normal text file with the file extension .mmcv.\n"
                                 + "If you add colors directly to the file you will have to reload it by changing to the version.");
+                
+                versionSelected = true;
             }
         } catch (IllegalArgumentException e) {
             JOptionPane.showMessageDialog(this,
@@ -407,6 +405,7 @@ public class MainFrame extends javax.swing.JFrame {
                     "I/O Error!",
                     JOptionPane.ERROR_MESSAGE);
         }
+        updateView();
     }//GEN-LAST:event_newVersionButtonActionPerformed
 
     private void removeColorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeColorButtonActionPerformed
