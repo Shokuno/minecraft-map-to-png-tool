@@ -4,5 +4,6 @@ nbproject/
 dist/
 nbdist/
 .nb-gradle/
+test/
 build.xml
 manifest.mf
